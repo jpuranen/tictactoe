@@ -13,6 +13,8 @@ node tictactoe6.js [width] [height] [number_of_game_pieces]
 **Example:**
 node tictactoe6.js 10 15 7
 
+
+
 **Parameters:**
 
 **[width]**

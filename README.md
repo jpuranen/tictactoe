@@ -4,7 +4,7 @@ https://github.com/jpuranen/tictactoe
 
 **About the tictactoe game:**
 
-The game can be played in 2 player mode where there is 2 humans playing. The players are player "X" and player "O". **This version does not support the game against the computer.**
+The game can be played in 2 player mode where there is 2 humans playing. The players are "Player X" and "Player O". **This version does not support the game against the computer.**
 
 The tictactoe game is started from command line with the following command:
 

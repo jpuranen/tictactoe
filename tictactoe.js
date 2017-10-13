@@ -213,8 +213,12 @@ function verifyArgs(arg1, arg2, arg3, arg4) {
         throw new Error("Command line arguments are not valid!");
     }
 }
+function sayHello(arg1, arg2, arg3) {
+    var greetings = "\nWelcome to play the brand new Tictactoe game!\n\nYou have selected the game area of " + arg1 + " width and " + arg2 + " height.\n\nTo win the game the winner needs to have " + arg3 + " game pieces next to each other. The cell to play can be selected by giving the column and the row. \nColumns are identified with alphabets and rows with numbers (a valid selection is e.g. B10).\n\nNote: The game can be played in 2 player mode only where there is 2 humans playing. Players are identified with \"Player X\" and \"Player O\".\n\nMay the best player win!\n\n";
+    console.log(greetings);
+}
 verifyArgs(process.argv[2], process.argv[3],process.argv[4],process.argv.length);
-
+sayHello(process.argv[2], process.argv[3],process.argv[4]);
 var tb = new Table(Number(process.argv[2]),Number(process.argv[3]),Number(process.argv[4]));
 tb.printTable();
 
@@ -222,7 +226,8 @@ var vuorolaskuri = 0;
 var xoString = "XO";
 do {
     var vuorossa = xoString.charAt(vuorolaskuri % 2);
-    var solu = readlineSync.question("Player " + vuorossa + " Give the cell: ").toUpperCase();
+    var solu = readlineSync.question("\nPlayer " + vuorossa + ": Give the cell to play: ").toUpperCase();
+    console.log("\n");
     if(!tb.isValidInput(solu)) {
         console.log("Please give valid input. " + solu + " is not valid.");
     } else {
